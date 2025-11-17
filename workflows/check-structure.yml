@@ -1,0 +1,34 @@
+name: Generative-AI-Aplliecation-Research
+
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Check required files
+        run: |
+          REQUIRED_FILES=("research_on_generative_ai.md" "vocabulary.md" "vocabulary_relation_map.html")
+          MISSING=false
+          
+          for FILE in "${REQUIRED_FILES[@]}"; do
+            if [ ! -f "$FILE" ]; then
+              echo "::error ::Missing required file: $FILE"
+              MISSING=true
+            else
+              echo "Found: $FILE"
+            fi
+          done
+
+          if [ "$MISSING" = true ]; then
+            exit 1
+          fi
+
+      - name: Success message
+        run: echo "All required files are present. Good job!"
