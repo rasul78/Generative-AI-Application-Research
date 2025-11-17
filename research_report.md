@@ -135,5 +135,6 @@ Current Solutions
 4.	LivePerson AI — orchestration of multi-agent dialogues
 
 Conclusion
+
 Generative artificial intelligence has become A fundamental technology used in a wide range of industries, from business process automation and medicine to software development and visual design. While these systems provide significant efficiency gains and unlock new types of creativity, they also pose challenges related to accuracy, ethical data use, and technical integration. Understanding both the capabilities and limitations of generative AI is critical to creating responsible, scalable, and innovative applications.
 
